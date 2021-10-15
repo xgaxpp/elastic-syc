@@ -36,8 +36,8 @@ func init() {
 
 
 	v7client, err = v7.NewClient(
-		v7.SetURL("http://10.10.10.53:9200"),
-		v7.SetBasicAuth("elastic", "iceasy2021"),
+		v7.SetURL("http://localhost:9200"),
+		v7.SetBasicAuth("elastic", "************"),
 	)
 
 	if err != nil {
@@ -52,8 +52,8 @@ func main() {
 func sync() {
 
 	client, err := v2.NewClient(
-		v2.SetURL("http://10.10.10.161:9200"),
-		v2.SetBasicAuth("iceasyadm", "m7M0Z%hbRsDQirISAu"),
+		v2.SetURL("http://targethost:9200"),
+		v2.SetBasicAuth("elastic", "*********"),
 	)
 
 	v2.SetErrorLog(loger)
